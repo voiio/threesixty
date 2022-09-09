@@ -1,6 +1,7 @@
 import os
 
 import dj_database_url
+from service_urls import db, email
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -72,7 +73,12 @@ WSGI_APPLICATION = "threesixty.wsgi.application"
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(conn_max_age=500),
+    "default": {
+        **db.parse(
+            os.getenv("DATABASE_URL", "postgres:///threesixty"),
+        ),
+        "ENGINE": "django.db.backends.postgresql",
+    },
 }
 
 CSRF_COOKIE_SECURE = True
@@ -140,13 +146,11 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-if os.environ.get("SENDGRID_USERNAME", False) and os.environ.get(
-    "SENDGRID_PASSWORD", False
-):
-    EMAIL_HOST = "smtp.sendgrid.net"
-    EMAIL_HOST_USER = os.environ.get("SENDGRID_USERNAME")
-    EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_PASSWORD")
-    EMAIL_PORT = 587
-    EMAIL_USE_TLS = True
-else:
-    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+def parse_email(config):
+    for key, value in email.parse(os.getenv("EMAIL_URL", "console://")).items():
+        if key == "ENGINE":
+            key = "BACKEND"
+        config[f"EMAIL_{key}"] = value
+
+
+parse_email(locals())

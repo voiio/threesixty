@@ -122,17 +122,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "dj-database-url"
-version = "1.0.0"
-description = "Use Database URLs in your Django Application."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-Django = ">3.2"
-
-[[package]]
 name = "Django"
 version = "4.1.1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
@@ -148,6 +137,14 @@ tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+
+[[package]]
+name = "django-service-urls"
+version = "1.2"
+description = "setting helper for django to represent databases, caches and email settings via a single string"
+category = "main"
+optional = false
+python-versions = ">=3.5"
 
 [[package]]
 name = "django-stubs"
@@ -601,8 +598,8 @@ brotli = ["Brotli"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "3.10.4"
-content-hash = "5814117684d7bd53f2f4ab9ffb73882d249bf569b0d977b11dd3a8a0c26b02d7"
+python-versions = "^3.10.0"
+content-hash = "534245cc2b2422266d6a1e1a458fe16d768c99dfec8c40bf5ca27fb9cc22276b"
 
 [metadata.files]
 asgiref = [
@@ -719,13 +716,12 @@ distlib = [
     {file = "distlib-0.3.6-py2.py3-none-any.whl", hash = "sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e"},
     {file = "distlib-0.3.6.tar.gz", hash = "sha256:14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46"},
 ]
-dj-database-url = [
-    {file = "dj-database-url-1.0.0.tar.gz", hash = "sha256:ccf3e8718f75ddd147a1e212fca88eecdaa721759ee48e38b485481c77bca3dc"},
-    {file = "dj_database_url-1.0.0-py3-none-any.whl", hash = "sha256:cd354a3b7a9136d78d64c17b2aec369e2ae5616fbca6bfbe435ef15bb372ce39"},
-]
 Django = [
     {file = "Django-4.1.1-py3-none-any.whl", hash = "sha256:acb21fac9275f9972d81c7caf5761a89ec3ea25fe74545dd26b8a48cb3a0203e"},
     {file = "Django-4.1.1.tar.gz", hash = "sha256:a153ffd5143bf26a877bfae2f4ec736ebd8924a46600ca089ad96b54a1d4e28e"},
+]
+django-service-urls = [
+    {file = "django_service_urls-1.2-py3-none-any.whl", hash = "sha256:7c5a0b3ddcaea1874ed57b3a7ae69fa466f7c4ca4156e168a4fc290aaa24d0b4"},
 ]
 django-stubs = [
     {file = "django-stubs-1.12.0.tar.gz", hash = "sha256:ea8b35d0da49f7b2ee99a79125f1943e033431dd114726d6643cc35de619230e"},

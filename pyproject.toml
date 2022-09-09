@@ -5,8 +5,9 @@ description = ""
 authors = []
 
 [tool.poetry.dependencies]
-dj-database-url = "*"
+python = "^3.10.0"
 django = "*"
+django-service-urls = "*"
 psycopg2-binary = "*"
 waitress = "*"
 whitenoise = "*"
