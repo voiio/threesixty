@@ -32,6 +32,7 @@ class WithEmailTokenMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["token"] = self.token
+        context["email"] = self.email
         return context
 
 
@@ -75,7 +76,7 @@ class SurveyUpdateView(ManagerRequiredMixin, generic.UpdateView):
 
 
 class SurveyDataView(EmployeeRequiredMixin, generic.DetailView):
-    queryset = models.Survey.objects.filter(is_complete=True)
+    queryset = models.Survey.objects.all()
     survey_results = """
         WITH results AS (
             SELECT
