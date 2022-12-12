@@ -148,7 +148,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "django-stubs"
-version = "1.13.0"
+version = "1.13.1"
 description = "Mypy stubs for Django"
 category = "dev"
 optional = false
@@ -603,7 +603,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10.0"
-content-hash = "e4fb6e32b68f1d2c71d6b109e2fea2948156e5b48276297037cb561385d22ef7"
+content-hash = "f8c05e3e686ea36e55230a17fc8fe7317fc54cb9f9721ac2b268ede058542c3e"
 
 [metadata.files]
 asgiref = [
@@ -725,8 +725,8 @@ django-service-urls = [
     {file = "django_service_urls-1.2-py3-none-any.whl", hash = "sha256:7c5a0b3ddcaea1874ed57b3a7ae69fa466f7c4ca4156e168a4fc290aaa24d0b4"},
 ]
 django-stubs = [
-    {file = "django-stubs-1.13.0.tar.gz", hash = "sha256:424fdd1935f859a802365056f9ccf4db12d1d93a5ab3de6d5633dddba0c5fc76"},
-    {file = "django_stubs-1.13.0-py3-none-any.whl", hash = "sha256:eaecc1fc71532c1148f0c9687556651d880165476d7629bf318ff86a903a150c"},
+    {file = "django-stubs-1.13.1.tar.gz", hash = "sha256:bcc618ba353dabc540d982b9dac1d5a1921652f8fc2a13653d545a57d5e3cc0f"},
+    {file = "django_stubs-1.13.1-py3-none-any.whl", hash = "sha256:fbf2ee6a4bce76c3eb5f6707ccadb4cf1c2f1ec485e8c44701ca8de2d0a5df18"},
 ]
 django-stubs-ext = [
     {file = "django-stubs-ext-0.7.0.tar.gz", hash = "sha256:4fd8cdbc68d1a421f21bb7e0d9e76d50f6a4b504d350ba786405daf536e90c21"},
