@@ -260,14 +260,14 @@ files = [
 
 [[package]]
 name = "django-stubs"
-version = "1.13.1"
+version = "1.13.2"
 description = "Mypy stubs for Django"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "django-stubs-1.13.1.tar.gz", hash = "sha256:bcc618ba353dabc540d982b9dac1d5a1921652f8fc2a13653d545a57d5e3cc0f"},
-    {file = "django_stubs-1.13.1-py3-none-any.whl", hash = "sha256:fbf2ee6a4bce76c3eb5f6707ccadb4cf1c2f1ec485e8c44701ca8de2d0a5df18"},
+    {file = "django-stubs-1.13.2.tar.gz", hash = "sha256:19e97efecfaf80e42c479ee7ed6179f3120c1b2c11e665b2e8305457e41ee069"},
+    {file = "django_stubs-1.13.2-py3-none-any.whl", hash = "sha256:f9edb3ef09ac2a014b111d894d86376a70b447f13fe7905ea6c0752e08a1514a"},
 ]
 
 [package.dependencies]
@@ -997,4 +997,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10.0"
-content-hash = "1b2f6d7946aa7337a8be652c9a8ec19582a8d740292c8ec79bf7904957c31006"
+content-hash = "68f968dde078d6f1ff5f8f209182b02663617e75a844bf3353ffb2ccc69429e0"
