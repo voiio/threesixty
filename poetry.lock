@@ -263,14 +263,18 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-service-urls"
-version = "1.2"
+version = "1.3"
 description = "setting helper for django to represent databases, caches and email settings via a single string"
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.8"
 files = [
-    {file = "django_service_urls-1.2-py3-none-any.whl", hash = "sha256:7c5a0b3ddcaea1874ed57b3a7ae69fa466f7c4ca4156e168a4fc290aaa24d0b4"},
+    {file = "django-service-urls-1.3.tar.gz", hash = "sha256:c823abb4b5b4a2c7ead800f57f088c86dfbfb923efa0782770dbd436f1a7ae6d"},
+    {file = "django_service_urls-1.3-py3-none-any.whl", hash = "sha256:dff8e34dcbc0507ffe427b34587f7bd49184cb0a4aa42fd2637e7ad45abf9b18"},
 ]
+
+[package.dependencies]
+django = "*"
 
 [[package]]
 name = "django-stubs"
